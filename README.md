@@ -19,7 +19,7 @@ $bower install angular-color-contrast
 
 Include this component into your app
 
-```javascript
+```html
 <script src="color-contrast.js"></script>
 ```
 
