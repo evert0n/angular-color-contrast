@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Color Contrast Directive Demo</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="demo.css" rel="stylesheet">
+</head>
+<body ng-app="demoApp">
+
+  <div class="jumbotron">
+    <div class="container">
+      <h2>AngularJS Color Contrast Directive</h2>
+      <p>Automatically set the text color based on the background.</p>
+      <p>Helps you display things like colored labels.</p>
+      <p>&nbsp;</p>
+      <p>
+        <iframe src="http://ghbtns.com/github-btn.html?user=evert0n&repo=angular-color-contrast&type=watch&count=true&size=large"
+          allowtransparency="true" frameborder="0" scrolling="0" width="150" height="32"></iframe>
+        <iframe src="http://ghbtns.com/github-btn.html?user=evert0n&repo=angular-color-contrast&type=fork&count=true&size=large"
+          allowtransparency="true" frameborder="0" scrolling="0" width="150" height="32"></iframe>
+      </p>
+    </div>
+  </div>
+  
+  <div class="container" ng-controller="demoCtrl">
+    <h2>Demo (with AngularJS issues labels)</h2>
+    <div ng-hide="labels" class="loading">Loading labels from Github...</div>
+    <div ng-show="labels" class="labels">
+      <a ng-repeat="label in labels" href="https://github.com/angular/angular.js/issues?labels={{label.name}}" target="_blank"><span class="label" color-contrast="{{label.color}}">{{label.name}}</span></a> 
+    </div>
+  </div>
+  
+  <div class="container">
+    <h3>Install with Bower</h3>
+    <pre>bower install angular-color-contrast</pre>
+    <h3>Include this component into your app</h3>
+    <pre>&lt;script src=&quot;color-contrast.js&quot;&gt;&lt;/script&gt;</pre>
+    <h3>Inject <code>colorContrast</code> as a module dependency to your app.</h3>
+    <pre>var myApp = angular.module('myApp', ['colorContrast']);</pre>
+    <h3>Pass the background color of element to get the right color contrast for the text.</h3>
+    <script src="https://gist.github.com/evert0n/8238710.js"></script>
+  </div>
+  
+  <div class="container">
+    <h2>Code</h2>
+    <p>View on Github - <a href="https://github.com/evert0n/angular-color-contrast/">https://github.com/evert0n/angular-color-contrast/</a></p>
+  </div>
+  
+  <div class="container">
+    <h2>Credits</h2>
+    <p>Based of the awesome <code>getContrastYIQ()</code> method from <a href="http://24ways.org/2010/calculating-color-contrast/" target="_blank">"Calculating Color Contrast"</a> article by Brian Suda at 24 Ways.</p>
+  </div>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+  <script src="../src/color-contrast.js"></script>
+  <script src="demo.js"></script>
+</body>
+</html>
