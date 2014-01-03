@@ -31,7 +31,7 @@ var myApp = angular.module('myApp', ['colorContrast']);
 
 Pass the background color of element to get the right color contrast for the text.
 
-```javascript
+```html
 <div ng-show="labels" class="labels">
   <a ng-repeat="label in labels" href="https://github.com/angular/angular.js/issues?labels={{label.name}}" target="_blank"><span class="label" color-contrast="{{label.color}}">{{label.name}}</span></a> 
 </div>
