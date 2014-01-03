@@ -1,0 +1,24 @@
+{
+  "name": "angular-color-contrast",
+  "version": "0.1.0",
+  "authors": [
+    "Everton Yoshitani <everton@notreve.com>"
+  ],
+  "description": "AngularJS Color Contrast Directive",
+  "main": ["./src/color-contrast.js"],
+  "keywords": [
+    "color",
+    "contrast",
+    "foreground",
+    "background"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/evert0n/angular-color-contrast",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
