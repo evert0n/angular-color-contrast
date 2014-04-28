@@ -29,7 +29,8 @@ angular.module('colorContrast', [])
         attrs.$observe('colorContrast', function(color) {
           if (color) {
             color = stripNumberSign(color);
-            element.attr('style', 'background-color:#' + color + ';color:#' + getContrastYIQ(color) + ';');
+            element.css("background-color", "#" + color);
+            element.css("color", "#" + getContrastYIQ(color));
           }
         });
       }
