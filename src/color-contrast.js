@@ -28,7 +28,7 @@ angular.module('colorContrast', [])
       link: function postLink(scope, element, attrs) {
         attrs.$observe('colorContrast', function(color) {
           if (color) {
-			color = stripNumberSign(color);
+            color = stripNumberSign(color);
             element.attr('style', 'background-color:#' + color + ';color:#' + getContrastYIQ(color) + ';');
           }
         });
