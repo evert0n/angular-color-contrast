@@ -15,12 +15,20 @@ angular.module('colorContrast', [])
     	var yiq = ((r*299)+(g*587)+(b*114))/1000;
     	return (yiq >= 128) ? DARK : LIGHT;
     }
+
+	function stripNumberSign(color){
+		if(color[0] === "#") {
+			color = color.substring(1, color.length);
+		}
+		return color;
+    }
     
     return {
       restrict: 'A',
       link: function postLink(scope, element, attrs) {
         attrs.$observe('colorContrast', function(color) {
           if (color) {
+			color = stripNumberSign(color);
             element.attr('style', 'background-color:#' + color + ';color:#' + getContrastYIQ(color) + ';');
           }
         });
