@@ -36,10 +36,10 @@ angular.module('colorContrast', [])
           if (color) {
             color = stripNumberSign(color);
             element.css("background-color", "#" + color);
-            element.css("color", "#" + getContrastYIQ(color));
+            element.css("color", "#" + getContrastYIQ(color, scope.darkColor, scope.lightColor));
           }
         });
       }
     };
-    
+
   });
