@@ -18,9 +18,13 @@ angular.module('colorContrast', [])
         }
         return color;
     };
-    
+
     return {
       restrict: 'A',
+      scope: {
+        darkColor: '=?',
+        lightColor: '=?'
+      },
       link: function postLink(scope, element, attrs) {
         attrs.$observe('colorContrast', function(color) {
           if (color) {
