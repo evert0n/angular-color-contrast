@@ -27,16 +27,16 @@ angular.module('colorContrast', [])
       },
       link: function postLink(scope, element, attrs) {
         if(!attrs.darkColor){
-          scope.darkColor = '000000';
+          scope.darkColor = '#000000';
         }
         if(!attrs.lightColor){
-          scope.lightColor = 'ffffff';
+          scope.lightColor = '#ffffff';
         }
         attrs.$observe('colorContrast', function(color) {
           if (color) {
             color = stripNumberSign(color);
             element.css("background-color", "#" + color);
-            element.css("color", "#" + getContrastYIQ(color, scope.darkColor, scope.lightColor));
+            element.css("color", getContrastYIQ(color, scope.darkColor, scope.lightColor));
           }
         });
       }
