@@ -35,7 +35,22 @@ Pass the background color of element to get the right color contrast for the tex
 <div ng-show="labels" class="labels">
   <a ng-repeat="label in labels" href="#" target="_blank">
     <span class="label" color-contrast="{{label.color}}">{{label.name}}</span>
-  </a> 
+  </a>
+</div>
+```
+
+By default, light and dark colors are specified as `#ffffff` and `#000000` respectively. You can also pass your own color values as HEX colors for custom control over the light and dark colors that are applied.
+
+```javascript
+...
+$scope.myDarkColor = '#444';
+...
+```
+```html
+<div ng-show="labels" class="labels">
+  <a ng-repeat="label in labels" href="#" target="_blank">
+    <span class="label" color-contrast="{{label.color}}" light-color="'#eee'" dark-color="myDarkColor">{{label.name}}</span>
+  </a>
 </div>
 ```
 
