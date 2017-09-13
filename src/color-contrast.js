@@ -26,6 +26,12 @@ angular.module('colorContrast', [])
         lightColor: '=?'
       },
       link: function postLink(scope, element, attrs) {
+        if(!attrs.darkColor){
+          scope.darkColor = '000000';
+        }
+        if(!attrs.lightColor){
+          scope.lightColor = '000000';
+        }
         attrs.$observe('colorContrast', function(color) {
           if (color) {
             color = stripNumberSign(color);
