@@ -2,11 +2,7 @@
 
 angular.module('colorContrast', [])
   .directive('colorContrast', function () {
-    
-    var DARK = '000000';
-    
-    var LIGHT = 'FFFFFF';
-    
+
     // 24 WAYS - http://24ways.org/2010/calculating-color-contrast/
     function getContrastYIQ(hexcolor){
     	var r = parseInt(hexcolor.substr(0,2),16);
