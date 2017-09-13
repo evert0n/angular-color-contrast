@@ -30,7 +30,7 @@ angular.module('colorContrast', [])
           scope.darkColor = '000000';
         }
         if(!attrs.lightColor){
-          scope.lightColor = '000000';
+          scope.lightColor = 'ffffff';
         }
         attrs.$observe('colorContrast', function(color) {
           if (color) {
